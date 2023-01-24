@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fafafa;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding-block: 4rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+div.img {
+  position: relative;
+  width: 38.4rem;
+  height: 58.6rem;
+  z-index: 1;
+}
+
+div.img::before {
+  content: "";
+  width: 26rem;
+  height: 55rem;
+  position: absolute;
+  background: #000000;
+  right: 1.4rem;
+  top: 2.2rem;
+  z-index: -1;
+  opacity: 0.37;
+}
+
+div.img::after {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 30rem;
+  right: 0;
+  top: 0;
+  border-radius: 100%;
+  z-index: -1;
+  background: #ffffff;
+  filter: blur(10rem);
+}
+
+div.img img {
+  width: 100%;
+  height: 100%;
+}
+
+div.sw-img {
+  position: absolute;
+  left: 11.4rem;
+  top: 1.6rem;
+
+  width: 25.5rem;
+  border-radius: 1.3rem;
+  z-index: -2;
+
+  animation: changeImg 9s infinite alternate-reverse;
+  height: 55.6rem;
+  border-radius: 2rem;
+}
+form {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+}
+
+.login {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+  padding-inline: 4.3rem;
+  padding-block: 2rem 2rem;
+  background-color: #ffffff;
+  border: 0.1rem solid #dbdbdb;
+  border-radius: 0.1rem;
+}
+.login h1 {
+  font-size: 3.8rem;
+}
+
+.login .img-p {
+  width: 10rem;
+  position: relative;
+  z-index: 2;
+  height: 10rem;
+  margin-block: 2.7rem 2.3rem;
+}
+
+.login .img-p::before {
+  content: "";
+  background: url(../assets/github-profile.png) center / cover no-repeat;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -2;
+}
+
+button {
+  background: #0095f6;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: 0.8rem;
+  border: none;
+
+  font-weight: 600;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.login img {
+  padding-top: 3rem;
+}
+
+.login .chang-acc {
+  margin-top: 3rem;
+  gap: 0.6rem;
+  font-size: 1.2rem;
+
+  display: flex;
+}
+
+.login .chang-acc p {
+  opacity: 0.35;
+}
+
+
+.login .chang-acc a {
+  color: #0095f6;
+}
+
+.login-sub {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+  padding-inline: 4.3rem;
+  padding-block: 2rem;
+  background-color: #ffffff;
+  border: 0.1rem solid #dbdbdb;
+  border-radius: 0.1rem;
+}
+
+.links-sub-or-change {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 1.4rem;
+}
+.login-sub h3,
+.links-sub-or-change p {
+  opacity: 0.35;
+  font-weight: 400;
+}
+
+.login-sub h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.links-sub-or-change a {
+  color: #0095f6;
+}
+
+.downl {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-size: 1.4rem;
+  gap: 2rem;
+}
+
+.downl .apps {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.downl .apps img {
+  width: 13.4rem;
+  height: 4rem;
+}
+
+.downl .apps img:nth-child(2) {
+  width: 11.4rem;
+}
+
+@media (min-width: 320px) {
+  .img {
+    display: none;
+  }
+  .login {
+    padding-inline: 2.3rem;
+  }
+}
+
+@media (min-width: 760px) {
+  .img {
+    display: initial;
+  }
+  .login {
+    padding-inline: 4.3rem;
+  }
+}
+
+@keyframes changeImg {
+  0% {
+    background: url(../assets/screenshot1.png) center / cover no-repeat;
+  }
+
+  50% {
+    background: url(../assets/screenshot2.png) center / cover no-repeat;
+  }
+
+  100% {
+    background: url(../assets/screenshot4.png) center / cover no-repeat;
+  }
+}
